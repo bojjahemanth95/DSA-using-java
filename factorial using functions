@@ -1,0 +1,20 @@
+#factorial using functions
+
+import java.util.*;
+public class Solution{
+    static int Factorial(int n){
+        int factorial=1;
+        for(int i=0;i<n;i++){
+           factorial*=(n-i);
+        } 
+            return factorial;
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        
+        int result=Factorial(n);
+        
+        System.out.println(result);
+    }
+}
