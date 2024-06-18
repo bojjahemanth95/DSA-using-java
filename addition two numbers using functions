@@ -1,0 +1,19 @@
+#addition two numbers using functions
+import java.util.*;
+public class Solution{
+    
+    static int Sum(int first,int second){
+        int result=0;
+        result=first+second;
+        
+        return result;
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int first=sc.nextInt();
+        int second=sc.nextInt();
+        int sum=Sum(first,second);
+        
+        System.out.println(sum);
+    }
+}
