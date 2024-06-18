@@ -1,0 +1,17 @@
+#check whether the person is eligible to vote or not using function 
+import java.util.*;
+public class Solution{
+    static int Vote(int age){
+        if(age>=18){
+            System.out.println("eligible to vote");
+        }else{
+            System.out.println("Not eligible to vote");
+        }
+        return age;
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int age=sc.nextInt();
+        int check=Vote(age);
+    }
+}
