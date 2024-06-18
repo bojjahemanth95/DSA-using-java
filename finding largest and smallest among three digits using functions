@@ -1,0 +1,39 @@
+# finding largest and smallest among three digits using functions 
+
+import java.util.*;
+public class Solution{
+    static int maximum(int first,int second,int third){
+     int maximum=first;
+        if(second>maximum){
+            maximum=second;
+        }
+        else if(third>maximum){
+            maximum=third;
+    }
+    return maximum;
+}
+    
+    static int minimum(int first,int second,int third){
+        int minimum=first;
+        if(second<minimum){
+            minimum=second;
+        }
+        else if(third<minimum){
+            minimum=third;
+        }
+        return minimum;
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int first=sc.nextInt();
+        int second=sc.nextInt();
+        int third=sc.nextInt();
+        
+        int largest=maximum(first,second,third);
+         int smallest=minimum(first,second,third);
+         
+         System.out.println(largest);
+         
+         System.out.println(smallest);
+    }
+}
