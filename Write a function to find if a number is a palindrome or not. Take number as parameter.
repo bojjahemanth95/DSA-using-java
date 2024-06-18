@@ -1,0 +1,25 @@
+Write a function to find if a number is a palindrome or not. Take number as parameter.
+import java.util.*;
+
+public class Solution {
+    static void Palindrome(String name) {
+        String original = name;
+        String reversed = "";
+        for (int i = name.length() - 1; i >= 0; i--) {
+            char letter = name.charAt(i);  
+            reversed += letter;
+        }
+        if (original.equals(reversed)) {
+            System.out.println("palindrome");
+        } else {
+            System.out.println("not a palindrome");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String name = sc.next();
+        Palindrome(name);
+    }
+}
