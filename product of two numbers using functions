@@ -1,0 +1,19 @@
+#product of two numbers using functions
+import java.util.*;
+public class Solution{
+    static int Product(int first,int second){
+        int product=1;
+        product=first*second;
+        
+        return product;
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int first=sc.nextInt();
+        int second=sc.nextInt();
+        
+        int product=Product(first,second);
+        
+        System.out.println(product);
+    }
+}
