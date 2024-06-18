@@ -1,0 +1,25 @@
+#Write a function to check if a given triplet is a Pythagorean triplet or not. 
+public class PythagoreanTripletChecker {
+    static boolean isPythagoreanTriplet(int a, int b, int c) {
+        
+        int[] arr = {a, b, c};
+        Arrays.sort(arr);
+        
+     
+        return (arr[0] * arr[0] + arr[1] * arr[1]) == arr[2] * arr[2];
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter three integers:");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        
+        if (isPythagoreanTriplet(a, b, c)) {
+            System.out.println("The given triplet is a Pythagorean triplet.");
+        } else {
+            System.out.println("The given triplet is not a Pythagorean triplet.");
+        }
+    }
+}
