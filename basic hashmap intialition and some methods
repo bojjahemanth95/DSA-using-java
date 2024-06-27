@@ -1,0 +1,19 @@
+#basic hashmap intialition and some methods
+import java.util.*;
+class Solution{
+    public static void main(String[] args){
+        HashMap<String,Integer> map=new HashMap<>();
+        map.put("hemanth",19);
+        map.put("virat",18);
+        map.put("RCB",100);
+        map.put("sreekar",19);
+        map.put("CSK",69);
+        System.out.println(map);
+        System.out.println(map.entrySet());
+        System.out.println(map.keySet());
+        System.out.println(map.remove("CSK"));
+        System.out.println(map.containsKey("CSK"));
+        System.out.println(map.get("RCB"));
+        System.out.println(map.size());
+    }
+}
