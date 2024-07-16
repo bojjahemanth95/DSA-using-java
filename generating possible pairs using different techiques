@@ -1,0 +1,37 @@
+generating possible pairs using different techiques
+
+import java.util.*;
+public class Solution{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.println(Arrays.toString(arr));
+        
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                System.out.println(arr[i]+" , "+arr[j]);
+            }
+        }
+    }
+}
+
+#using two pointer
+public static void generatePairs(int[] arr) {
+        int n = arr.length;
+        int left = 0;
+        int right = n - 1;
+
+        while (left < right) {
+            for (int i = left + 1; i <= right; i++) {
+                System.out.println("(" + arr[left] + ", " + arr[i] + ")");
+            }
+            left++;
+            for (int j = left; j < right; j++) {
+                System.out.println("(" + arr[j] + ", " + arr[right] + ")");
+            }
+            right--;
+        }
