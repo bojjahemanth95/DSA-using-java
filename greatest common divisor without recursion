@@ -1,0 +1,70 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        int[] arr={398,326,415,429,347,294,305,442,390,221,323};
+        System.out.println(Arrays.toString(arr));
+        int max=max(arr);
+        int min=min(arr);
+        System.out.println(max);
+        System.out.println(min);
+        System.out.println(divMax(max));
+        System.out.println(divMin(min));
+        ArrayList<Integer> hello=divMax(max);
+        ArrayList<Integer> hii=divMin(min);
+        System.out.println(compare(hello,hii));
+        ArrayList<Integer> come=compare(hello,hii);
+        System.out.println(maximum(come));
+    }
+ static int max(int[] arr){
+        int max1=arr[0];
+        for(int i=1;i<arr.length;i++){
+            if(max1<arr[i]){
+                max1=arr[i];
+            }
+        }
+            return max1;
+        }
+    
+ static int min(int[] arr){
+        int min1=arr[0];
+        for(int i=1;i<arr.length;i++){
+            if(min1>arr[i]){
+                min1=arr[i];
+            }
+        }
+            return min1;
+        }
+        static ArrayList<Integer> divMax(int max){
+            ArrayList<Integer> list=new ArrayList<>();
+            for(int i=1;i<=max;i++){
+                if(max%i==0){
+                    list.add(i);
+                }
+            }
+            return list;
+        }
+        static ArrayList<Integer> divMin(int min){
+            ArrayList<Integer> list=new ArrayList<>();
+            for(int i=1;i<=min;i++){
+                if(min%i==0){
+                    list.add(i);
+                }
+            }
+            return list;
+        }
+    static ArrayList<Integer> compare(ArrayList<Integer> hello, ArrayList<Integer> hii) {
+        ArrayList<Integer> common = new ArrayList<>(hii);
+        common.retainAll(hello); 
+    return common;
+}
+static int maximum(ArrayList<Integer> common){
+    
+        int maxi=common.get(0);
+        for(int i=1;i<common.size();i++){
+            if(maxi<common.get(i)){
+                maxi=common.get(i);
+            }
+        }
+        return maxi;
+    }
+}
